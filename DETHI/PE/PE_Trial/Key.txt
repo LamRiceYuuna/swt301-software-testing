@@ -1,0 +1,130 @@
+C1:
+Test Case 1: Valid input values
+Input: strUserName = "testuser", strPassword = "Test123#", strPhone = "0123456789"
+Expected Output: Return TRUE and show the message "Register success."
+Test Case 2: Duplicate username
+Input: strUserName = "existinguser", strPassword = "Test123#", strPhone = "0123456789"
+Existing users: ["existinguser"]
+Expected Output: Return FALSE and show the message "User name already exist."
+Test Case 3: Invalid username (length less than 7 characters)
+Input: strUserName = "user", strPassword = "Test123#", strPhone = "0123456789"
+Expected Output: Return FALSE and show the message "Username is invalid."
+Test Case 4: Invalid username (length greater than 12 characters)
+Input: strUserName = "thisusernameistoolong", strPassword = "Test123#", strPhone = "0123456789"
+Expected Output: Return FALSE and show the message "Username is invalid."
+Test Case 5: Invalid username (first character is a number)
+Input: strUserName = "1user", strPassword = "Test123#", strPhone = "0123456789"
+Expected Output: Return FALSE and show the message "Username is invalid."
+Test Case 6: Invalid username (contains special characters)
+Input: strUserName = "user@123", strPassword = "Test123#", strPhone = "0123456789"
+Expected Output: Return FALSE and show the message "Username is invalid."
+Test Case 7: Invalid password (length less than 12 characters)
+Input: strUserName = "testuser", strPassword = "Test1#", strPhone = "0123456789"
+Expected Output: Return FALSE and show the message "Password is invalid."
+Test Case 8: Invalid password (does not contain a special character)
+Input: strUserName = "testuser", strPassword = "Test1234", strPhone = "0123456789"
+Expected Output: Return FALSE and show the message "Password is invalid."
+Test Case 9: Invalid password (does not contain an uppercase character)
+Input: strUserName = "testuser", strPassword = "test123#", strPhone = "0123456789"
+Expected Output: Return FALSE and show the message "Password is invalid."
+Test Case 10: Invalid password (does not contain a numeric character)
+Input: strUserName = "testuser", strPassword = "TestPass#", strPhone = "0123456789"
+Expected Output: Return FALSE and show the message "Password is invalid."
+Test Case 11: Invalid phone number (length less than 10 digits)
+Input:
+strUserName: "myusername"
+strPassword: "MyPassword123#"
+strPhone: "1234567890"
+Expected Output:
+Return FALSE and show the message "Cellphone number is invalid."
+
+
+
+
+C2:
+Decision Table:
+Decision: Verify all data that the actor fills in to create a new class.
+Condition Actions
+Course is selected If all data is correct, click "Save," create a new class, and show a success message.
+If any of the data is incorrect, show a notification and change the color to red for the incorrect field.
+If the actor clicks "Cancel," return to the list class page, and all data in the create page will not be saved.
+Course is not selected Show a notification and change the color to red for the course field.
+High-level test cases with test data:
+Test Case 1: Course is selected, and all data are correct.
+Input:
+Course: English Beginner 1
+Class Name: Monday Morning
+Start Date: 2023-03-07
+End Date: 2023-06-05
+Start Time: 09:00
+End Time: 11:00
+Expected Output:
+Click "Save"
+A new class is created successfully.
+Show a success message.
+Test Case 2: Course is selected, and some data are incorrect.
+Input:
+Course: English Intermediate 2
+Class Name: Monday Morning
+Start Date: 2023-03-07
+End Date: 2022-06-05
+Start Time: 09:00
+End Time: 11:00
+Expected Output:
+Show a notification and change the color to red for the end date field.
+The actor can correct the end date field or click "Cancel" to return to the list class page.
+Test Case 3: Course is not selected.
+Input:
+Course: [Not selected]
+Class Name: Monday Morning
+Start Date: 2023-03-07
+End Date: 2023-06-05
+Start Time: 09:00
+End Time: 11:00
+Expected Output:
+Show a notification and change the color to red for the course field.
+The actor can select the course or click "Cancel" to return to the list class page.
+
+C3:
+Normal Flow:
+Test case name: Admin successfully creates a new class schedule
+Preconditions: The Admin is logged in and on the "Create Class Schedule" page.
+Input: Valid class information (course, teacher, schedule, room)
+Actions: The Admin clicks on the "Create" button.
+Expected Result: The system displays a success message, and the Manager receives an email notification about the new class.
+Test case name: Manager approves the new class schedule
+Preconditions: The Manager is logged in and on the "Pending Class Schedules" page.
+Input: Click on the "Approve" button for the new class schedule.
+Actions: The Manager clicks on the "Approve" button.
+Expected Result: The system displays a success message, and the teacher receives an email notification about the new class.
+Test case name: Teacher confirms the assignment
+Preconditions: The Teacher is logged in and on the "My Class Schedule" page.
+Input: Click on the "Confirm" button for the new class schedule.
+Actions: The Teacher clicks on the "Confirm" button.
+Expected Result: The system displays a success message, and the class schedule is confirmed.
+Test case name: Students can view the new class information
+Preconditions: The Students are logged in and on the "Class Schedule" page.
+Input: The Students navigate to the new class schedule.
+Actions: The Students click on the new class schedule.
+Expected Result: The system displays the new class information (course, teacher, schedule, room) to the Students.
+Alternative Flow:
+Test case name: Admin creates a new class schedule with invalid input
+Preconditions: The Admin is logged in and on the "Create Class Schedule" page.
+Input: Invalid class information (e.g., empty fields, invalid schedule)
+Actions: The Admin clicks on the "Create" button.
+Expected Result: The system displays an error message and highlights the invalid input fields.
+Test case name: Manager rejects the new class schedule
+Preconditions: The Manager is logged in and on the "Pending Class Schedules" page.
+Input: Click on the "Reject" button for the new class schedule.
+Actions: The Manager clicks on the "Reject" button.
+Expected Result: The system displays a success message, and the new class schedule is not created.
+Test case name: Teacher does not confirm the assignment
+Preconditions: The Teacher is logged in and on the "My Class Schedule" page.
+Input: Teacher does not click on the "Confirm" button for the new class schedule.
+Actions: None
+Expected Result: The system displays a message indicating that the class schedule is not confirmed.
+Test case name: Students cannot view the new class information
+Preconditions: The Students are logged in and on the "Class Schedule" page.
+Input: The Students navigate to the new class schedule, but it is not approved or confirmed.
+Actions: The Students click on the new class schedule.
+Expected Result: The system displays an error message indicating that the class schedule is not available.

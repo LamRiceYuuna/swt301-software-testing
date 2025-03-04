@@ -1,0 +1,51 @@
+Consider the following statements:
+i. 100% statement coverage guarantees 100% branch coverage.
+ii. 10096 branch coverage guarantees 10096 statement coverage.
+iii- 100% branch coverage guarantees 100% decision coverage-
+iv- 100% decision coverage guarantees 100% branch coverage.
+v. 100% statement coverage guarantees 100% decision coverage
+A.ii is True; i, iii, iv & v are False
+B.i & v are True; ii, iii & iv are False
+C.ii & iii are True; i, iv & v are False
+D.ii, iii & iv are True; i & v are False
+
+
+Analyse the following highly simplified procedure:
+Ask: 'What type of ticket do you require, single or return?"
+IF the customer wants 'return'
+Ask: "What rate, Standard or Cheap-daym
+IF the customer replies 'Cheap-day'
+Say: "That will be €11:20"
+ELSE
+sav. "That will be €19:50
+ENDIF
+ELSE say: "That will be €9:75"
+ENDIF
+Now decide the minimum number of tests that are needed to ensure that all the questions have been
+combinations have occurred and all replies given.
+
+
+Sometimes sofWare tester can use only error guessing technique while testing a sofWare
+R True
+B. False
+
+A wholesaler sells printer cartridges. The minimum order quantity is 5. There is a 2096 discount fi
+100 or more printer cartridges. You have been asked to prepare test cases using various values
+number of printer cartridges ordered. Which of the following groups contain three test inputs that
+generated using Boundary Value AnalysisQ
+
+
+Load testing emphasizes on performance under load while stress testing
+emphasizes on
+A.Breaking load
+B.performance under stress
+C.Performance under load
+D.There is no such difference, both are same
+
+
+What can static analysis NOT find?
+a.the use of a variable before it has been defined
+b.unreachable ("dead") code
+c.memory leaks
+d.array bound violations
+

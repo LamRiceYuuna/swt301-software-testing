@@ -1,0 +1,238 @@
+C1:
+
+1/Test case 1: Verify that the method returns an error if the pet object is null.
+Input data condition: pet object = null
+Expected output: error message is returned
+Test case 2: Verify that the method adds a new pet to the system when all input attributes are valid.
+Input data condition: pet object = {petName: "Fluffy", petType: "Dog", age: 3, gender: "Female", breed: "Golden Retriever", weight: 30, ownerName: "John Doe", ownerPhone: "555-555-1212", ownerEmail: "johndoe@email.com"}
+Expected output: new pet is added to the system
+Test case 3: Verify that the method returns an error if the pet name is missing.
+Input data condition: pet object = {petType: "Cat", age: 2, gender: "Male", breed: "Siamese", weight: 10, ownerName: "Jane Doe", ownerPhone: "555-555-1212", ownerEmail: "janedoe@email.com"}
+Expected output: error message is returned
+Test case 4: Verify that the method returns an error if the pet type is missing.
+Input data condition: pet object = {petName: "Mittens", age: 5, gender: "Female", breed: "Calico", weight: 8, ownerName: "Bob Smith", ownerPhone: "555-555-1212", ownerEmail: "bobsmith@email.com"}
+Expected output: error message is returned
+Test case 5: Verify that the method returns an error if the pet age is negative.
+Input data condition: pet object = {petName: "Rex", petType: "Dog", age: -1, gender: "Male", breed: "German Shepherd", weight: 60, ownerName: "Sally Jones", ownerPhone: "555-555-1212", ownerEmail: "sallyjones@email.com"}
+Expected output: error message is returned
+Test case 6: Verify that the method returns an error if the pet weight is negative.
+Input data condition: pet object = {petName: "Whiskers", petType: "Cat", age: 1, gender: "Female", breed: "Persian", weight: -1, ownerName: "Bill Johnson", ownerPhone: "555-555-1212", ownerEmail: "billjohnson@email.com"}
+Expected output: error message is returned
+Test case 7: Verify that the method returns an error if the owner name is missing.
+Input data condition: pet object = {petName: "Fido", petType: "Dog", age: 2, gender: "Male", breed: "Chihuahua", weight: 5, ownerPhone: "555-555-1212", ownerEmail: "johndoe@email.com"}
+Expected output: error message is returned
+Test case 8: Verify that the method returns an error if the owner phone number is missing.
+Input data condition: pet object = {petName: "Garfield", petType: "Cat", age: 7, gender: "Male", breed: "Tabby", weight: 15, ownerName: "Betty Smith", ownerEmail: "bettysmith@email.com"}
+Expected output: error message is returned
+
+
+Test Case 1: Valid input for all attributes
+Input: Pet object with name="Fluffy", type="Dog", color="Brown", age=12, sex="Male", microchip=TRUE, vaccinated=TRUE, image="dog.jpg", notes="This is a cute dog."
+Expected Output: TRUE with log message "PET created success"
+Test Case 2: Invalid input for name
+Input: Pet object with name="", type="Cat", color="White", age=6, sex="Female", microchip=FALSE, vaccinated=TRUE, image=NULL, notes=NULL
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 3: Invalid input for type
+Input: Pet object with name="Buddy", type="", color="Black", age=24, sex="Male", microchip=FALSE, vaccinated=FALSE, image=NULL, notes="This is a friendly dog."
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 4: Invalid input for color
+Input: Pet object with name="Luna", type="Rabbit", color="This is a very long color name that is not allowed in the system", age=3, sex="Female", microchip=TRUE, vaccinated=FALSE, image=NULL, notes=NULL
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 5: Invalid input for age
+Input: Pet object with name="Charlie", type="Dog", color="Golden", age=0, sex="Male", microchip=TRUE, vaccinated=TRUE, image=NULL, notes="This is a playful dog."
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 6: Invalid input for sex
+Input: Pet object with name="Misty", type="Cat", color="Gray", age=8, sex="", microchip=TRUE, vaccinated=TRUE, image=NULL, notes=NULL
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 7: Invalid input for microchip
+Input: Pet object with name="Rocky", type="Dog", color="White", age=36, sex="Male", microchip=NULL, vaccinated=TRUE, image=NULL, notes=NULL
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 8: Invalid input for vaccinated
+Input: Pet object with name="Sassy", type="Cat", color="Orange", age=4, sex="Female", microchip=FALSE, vaccinated=NULL, image=NULL, notes=NULL
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 9: Valid input with NULL image and notes
+Input: Pet object with name="Max", type="Dog", color="Black", age=18, sex="Male", microchip=TRUE, vaccinated=TRUE, image=NULL, notes=NULL
+Expected Output: TRUE with log message "PET created success"
+Test Case 10: Invalid input with NULL pet object
+Input: NULL
+Expected Output: FALSE with log message "PET is null!"
+
+
+1/BỔ SUNG : Test Case 1: Valid input for all attributes
+Input: Pet object with name="Fluffy", type="Dog", color="Brown", age=12, sex="Male", microchip=TRUE, vaccinated=TRUE, image="dog.jpg", notes="This is a cute dog."
+Expected Output: TRUE with log message "PET created success"
+Test Case 2: Invalid input for name
+Input: Pet object with name="", type="Cat", color="White", age=6, sex="Female", microchip=FALSE, vaccinated=TRUE, image=NULL, notes=NULL
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 3: Invalid input for type
+Input: Pet object with name="Buddy", type="", color="Black", age=24, sex="Male", microchip=FALSE, vaccinated=FALSE, image=NULL, notes="This is a friendly dog."
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 4: Invalid input for color
+Input: Pet object with name="Luna", type="Rabbit", color="This is a very long color name that is not allowed in the system", age=3, sex="Female", microchip=TRUE, vaccinated=FALSE, image=NULL, notes=NULL
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 5: Invalid input for age
+Input: Pet object with name="Charlie", type="Dog", color="Golden", age=0, sex="Male", microchip=TRUE, vaccinated=TRUE, image=NULL, notes="This is a playful dog."
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 6: Invalid input for sex
+Input: Pet object with name="Misty", type="Cat", color="Gray", age=8, sex="", microchip=TRUE, vaccinated=TRUE, image=NULL, notes=NULL
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 7: Invalid input for microchip
+Input: Pet object with name="Rocky", type="Dog", color="White", age=36, sex="Male", microchip=NULL, vaccinated=TRUE, image=NULL, notes=NULL
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 8: Invalid input for vaccinated
+Input: Pet object with name="Sassy", type="Cat", color="Orange", age=4, sex="Female", microchip=FALSE, vaccinated=NULL, image=NULL, notes=NULL
+Expected Output: FALSE with log message "PET created fail!"
+Test Case 9: Valid input with NULL image and notes
+Input: Pet object with name="Max", type="Dog", color="Black", age=18, sex="Male", microchip=TRUE, vaccinated=TRUE, image=NULL, notes=NULL
+Expected Output: TRUE with log message "PET created success"
+Test Case 10: Invalid input with NULL pet object
+Input: NULL
+Expected Output: FALSE with log message "PET is null!"
+
+1/ BỔ SUNG : Test Case: Age is a negative integer value (not a valid input)
+Input Data:
+name: "Max"
+type: "Dog"
+color: "Black"
+age: -10
+sex: "Male"
+microchip: true
+vaccinated: true
+image: "max.jpg"
+notes: "healthy and friendly"
+Expected Result:
+The function should return FALSE and log the message "PET created fail!"
+Test Case: Sex is not "Male" or "Female" (not a valid input)
+Input Data:
+name: "Fluffy"
+type: "Cat"
+color: "White"
+age: 24
+sex: "Unknown"
+microchip: true
+vaccinated: true
+image: null
+notes: null
+Expected Result:
+The function should return FALSE and log the message "PET created fail!"
+Test Case: microchip is not a Boolean value (not a valid input)
+Input Data:
+name: "Buddy"
+type: "Dog"
+color: "Brown"
+age: 12
+sex: "Male"
+microchip: "Yes"
+vaccinated: false
+image: "buddy.jpg"
+notes: null
+Expected Result:
+The function should return FALSE and log the message "PET created fail!"
+Test Case: vaccinated is not a Boolean value (not a valid input)
+Input Data:
+name: "Luna"
+type: "Dog"
+color: "White"
+age: 6
+sex: "Female"
+microchip: true
+vaccinated: "No"
+image: null
+notes: "shy and timid"
+Expected Result:
+The function should return FALSE and log the message "PET created fail!"
+Test Case: All inputs are null (not a valid input)
+Input Data:
+name: null
+type: null
+color: null
+age: null
+sex: null
+microchip: null
+vaccinated: null
+image: null
+notes: null
+Expected Result:
+The function should return FALSE and log the message "PET is null!"
+
+
+
+C2:
+
+2/Test Case 1:
+Actor: Admin
+Pet Name: Fluffy
+Pet Type: Dog
+Age: 3
+Gender: Female
+Breed: Golden Retriever
+Weight: 30
+Owner Name: John Doe
+Owner Phone: 555-555-1212
+Owner Email: johndoe@email.com
+Expected Output: Pet information is added successfully.
+Test Case 2:
+Actor: Admin
+Pet Name: null
+Pet Type: Dog
+Age: 3
+Gender: Female
+Breed: Golden Retriever
+Weight: 30
+Owner Name: John Doe
+Owner Phone: 555-555-1212
+Owner Email: johndoe@email.com
+Expected Output: Invalid input notification is displayed below the Pet Name field.
+Test Case 3:
+Actor: Admin
+Pet Name: Fluffy
+Pet Type: null
+Age: 3
+Gender: Female
+Breed: Golden Retriever
+Weight: 30
+Owner Name: John Doe
+Owner Phone: 555-555-1212
+Owner Email: johndoe@email.com
+Expected Output: Invalid input notification is displayed below the Pet Type field.
+Test Case 4:
+
+2/Add New Pet function:
+Test Case Actor Pet Name Pet Type Age Gender Breed Weight Owner Name Owner Phone Owner Email Expected Output
+1 Admin Valid Valid Valid Valid Valid Valid Valid Valid Valid Pet information is added successfully.
+2 Admin Null Valid Valid Valid Valid Valid Valid Valid Valid Invalid input notification is displayed below the Pet Name field.
+3 Admin Valid Null Valid Valid Valid Valid Valid Valid Valid Invalid input notification is displayed below the Pet Type field.
+4 Admin Valid Valid Negative Valid Valid Valid Valid Valid Valid Invalid input notification is displayed below the Age field.
+5 Admin Valid Valid Valid Null Valid Valid Valid Valid Valid Invalid input notification is displayed below the Gender field.
+6 Admin Valid Valid Valid Valid Null Valid Valid Valid Valid Invalid input notification is displayed below the Breed field.
+7 Admin Valid Valid Valid Valid Valid Negative Valid Valid Valid Invalid input notification is displayed below the Weight field.
+8 Admin Valid Valid Valid Valid Valid Valid Null Valid Valid Invalid input notification is displayed below the Owner Name field.
+9 Admin Valid Valid Valid Valid Valid Valid Valid Null Valid Invalid input notification is displayed below the Owner Phone field.
+10 Admin Valid Valid Valid Valid Valid Valid Valid Valid Invalid Invalid input notification is displayed below the Owner Email field.
+
+
+
+C3:
+
+3/Main Flow:
+Test case 1: Customer registers for a pet health check on the clinic website.
+Test case 2: Staff inputs customer information and it is saved successfully.
+Test case 3: Staff inputs pet information and it is saved successfully.
+Test case 4: Staff chooses health services requested by the customer and the information is saved successfully.
+Test case 5: Staff creates an invoice for the health services in step 4 and it is saved successfully.
+Test case 6: Staff confirms the payment and updates the status of the invoice to "Paid".
+Test case 7: The pet health service commences and the status is updated to "In progress".
+Test case 8: The pet health service is completed successfully and the status is updated to "Completed".
+Test case 9: The staff updates the pet's health record with the details of the completed health service.
+Test case 10: The staff generates a report on the completed health service.
+Alternative Flow:
+Test case 11: Customer registration fails due to a system error and an error message is displayed.
+Test case 12: Staff inputs incorrect customer information and is prompted to correct the information.
+Test case 13: Staff inputs incorrect pet information and is prompted to correct the information.
+Test case 14: Staff is unable to choose a health service due to an error and is prompted to try again later.
+Test case 15: Staff is unable to create an invoice due to a system error and an error message is displayed.
+Test case 16: Customer is unable to pay in cash and is prompted to pay through a different method.
+Test case 17: Staff is unable to confirm the payment due to a system error and an error message is displayed.
+Test case 18: Pet health service fails due to a system error and the staff is prompted to try again later.
+Test case 19: Staff is unable to update the pet's health record due to a system error and an error message is displayed.
+Test case 20: Staff is unable to generate a report on the completed health service due to a system error and an error message is displayed.

@@ -1,0 +1,121 @@
+C1:
+
+To design and create the component test cases for the ertCourse method, we should consider the following scenarios:
+Test Case 1 - Valid input parameters
+Input: CourselD = "CADYO008", CourseName = "English Advanced Level", Duration = 45
+Expected Output: TRUE and message "Course created success!"
+Test Case 2 - Invalid CourselD parameter (less than eight characters)
+Input: CourselD = "CAYO008", CourseName = "English Intermediate Level", Duration = 30
+Expected Output: FALSE and message "Course created fail! CourselD is invalid."
+Test Case 3 - Invalid CourselD parameter (more than eight characters)
+Input: CourselD = "CADYO0080", CourseName = "English Beginner Level", Duration = 20
+Expected Output: FALSE and message "Course created fail! CourselD is invalid."
+Test Case 4 - Invalid CourselD parameter (does not start with "C")
+Input: CourselD = "BADYO008", CourseName = "English Basic Level", Duration = 25
+Expected Output: FALSE and message "Course created fail! CourselD is invalid."
+Test Case 5 - Invalid CourseName parameter (less than 200 characters)
+Input: CourselD = "CADYO008", CourseName = "Eng", Duration = 30
+Expected Output: FALSE and message "Course created fail! CourseName is invalid."
+Test Case 6 - Invalid CourseName parameter (more than 1000 characters)
+Input: CourselD = "CADYO008", CourseName = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet", Duration = 30
+Expected Output: FALSE and message "Course created fail! CourseName is invalid."
+Test Case 7 - Invalid duration parameter (less than 15)
+Input: CourselD = "CADYO008", CourseName = "English Intermediate Level", Duration = 10
+Expected Output: FALSE and message "Course created fail! Duration is invalid."
+Test Case 8 - Invalid duration parameter (more than 60)
+Input: CourselD = "CADYO008", CourseName = "English Beginner Level", Duration = 70
+Expected Output: FALSE and message "Course created fail! Duration is invalid."
+
+
+C2:
+High-Level Test Cases:
+Test Case 1:
+Lesson Name: "Introduction to English Grammar"
+Lesson Type: "Grammar"
+Duration: 30
+Description: "This lesson introduces basic English grammar concepts."
+Lesson Main Content: Attached file (lesson_content.pdf)
+Lesson Material: Attached file (lesson_material.pdf)
+Homework: Attached file (homework.pdf)
+Expected Result: New lesson is created successfully
+Test Case 2:
+Lesson Name: ""
+Lesson Type: "Vocabulary"
+Duration: 45
+Description: "This lesson introduces new English words."
+Lesson Main Content: Attached file (lesson_content.pdf)
+Lesson Material: Attached file (lesson_material.pdf)
+Homework: Attached file (homework.pdf)
+Expected Result: The system shows a notification and highlights the 'Lesson Name' field in red
+Test Case 3:
+Lesson Name: "Introduction to American Culture"
+Lesson Type: ""
+Duration: 60
+Description: "This lesson discusses American culture and traditions."
+Lesson Main Content: Attached file (lesson_content.pdf)
+Lesson Material: Attached file (lesson_material.pdf)
+Homework: Attached file (homework.pdf)
+Expected Result: The system shows a notification and highlights the 'Lesson Type' field in red
+Test Case 4:
+Lesson Name: "Speaking Practice"
+Lesson Type: "Speaking"
+Duration: ""
+Description: "This lesson focuses on speaking practice."
+Lesson Main Content: Attached file (lesson_content.pdf)
+Lesson Material: Attached file (lesson_material.pdf)
+Homework: Attached
+
+C3:
+
+To design the test cases for the main flow and alternative flow for the business process of "go-live a new English course for the Center," we can consider the following scenarios:
+Main Flow:
+Test Case 1 - Teacher creates a new English Course
+Input: Valid course details
+Expected Output: The new course is created successfully.
+Test Case 2 - Teacher creates twelve lessons for the course.
+Input: Valid lesson details
+Expected Output: Twelve lessons are created and added to the course successfully.
+Test Case 3 - Leader receives a notification email about the new course.
+Input: None
+Expected Output: Leader receives an email notification about the new course.
+Test Case 4 - Leader reviews the course and makes a content approval.
+Input: Approve the content of the course
+Expected Output: The course is approved by the leader.
+Test Case 5 - Manager reviews the course and makes a business approval.
+Input: Approve the business aspect of the course
+Expected Output: The course is approved by the manager.
+Test Case 6 - System shows the new course information on the website.
+Input: None
+Expected Output: The new course information appears on the website.
+Alternative Flow:
+Test Case 7 - Teacher creates an invalid course.
+Input: Invalid course details
+Expected Output: The system should not allow creating an invalid course and return an error message.
+Test Case 8 - Teacher creates less than twelve lessons for the course.
+Input: Less than twelve lesson details
+Expected Output: The system should not allow creating less than twelve lessons and return an error message.
+Test Case 9 - Leader rejects the content of the course.
+Input: Reject the content of the course
+Expected Output: The course is rejected by the leader, and an error message appears.
+Test Case 10 - Manager rejects the business aspect of the course.
+Input: Reject the business aspect of the course
+Expected Output: The course is rejected by the manager, and an error message appears.
+Test Case 11 - System fails to show the new course information on the website.
+Input: None
+Expected Output: The system fails to show the new course information on the website and returns an error message.
+
+
+CÂU 3/ TỰ CONVERT SANG EXCEL : Main Flow Test Cases:
+TC001 - Verify that the teacher is able to create a new English course successfully.
+TC002 - Verify that the teacher is able to add twelve lessons to the course.
+TC003 - Verify that the leader receives a notification email about the new course.
+TC004 - Verify that the leader is able to review the course and approve its content.
+TC005 - Verify that the manager is able to review the course and approve it for business purposes.
+TC006 - Verify that the system displays the new course information on the website after all approvals.
+Alternate Flow Test Cases:
+TC007 - Verify that if the teacher fails to create a course, an error message is displayed.
+TC008 - Verify that if the teacher fails to add any lessons to the course, an error message is displayed.
+TC009 - Verify that if the leader fails to receive a notification email, the issue is logged and escalated.
+TC010 - Verify that if the leader rejects the course's content, an email notification is sent to the teacher with feedback.
+TC011 - Verify that if the manager rejects the course for business purposes, an email notification is sent to the teacher with feedback.
+TC012 - Verify that if the website fails to display the new course information, an error message is displayed, and the issue is logged and escalated.
